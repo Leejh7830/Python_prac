@@ -1,8 +1,7 @@
+from turtle import position
 import pyautogui
 from sqlalchemy import false
+import time
 
-pyautogui.hotkey('win','r')
-pyautogui.write('mspaint')
-pyautogui.hotkey('enter')
-
-print(pyautogui.getActiveWindow())
+time.sleep(3)
+print(pyautogui.position())
