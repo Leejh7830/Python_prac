@@ -50,3 +50,15 @@ test_poly = poly.transform(test_input)
 
 print(train_poly.shape)
 print(test_poly.shape)
+
+lr = LinearRegression()
+lr.fit(train_poly, train_target)
+
+print(lr.score(train_poly, train_target))
+print(lr.score(test_poly, test_target))
+
+poly = PolynomialFeatures(degree=5, include_bias=False)
+
+poly.fit(train_input)
+train_poly = poly.transform(train_input)
+test_poly = poly.transform(test_input)
