@@ -48,7 +48,8 @@ for i in range(10): ############# 반복횟수 = n * 10
     time.sleep(3)
     pyautogui.moveTo(621,339,duration=1)
     pyautogui.click() # 다시 첫번째 게시물 이동
-    time.sleep(30) # 휴식이 필요한것으로 보임.. 좋아요 빨리 누르면 안먹힘
+    time.sleep(30) # 휴식이 필요한것으로 보임.. 좋아요 빨리 누르면 리밋
 
+web.close()
 pyautogui.alert('실행 완료!')
 # 중간종료 ctrl + alt + del.

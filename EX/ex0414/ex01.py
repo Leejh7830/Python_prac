@@ -4,7 +4,7 @@ from PyQt5 import uic
 
 from myclick import MYC
 
-form_class = uic.loadUiType("./ex0414/myGui.ui")[0]
+form_class = uic.loadUiType("./EX/ex0414/myGui.ui")[0]
 
 class WindowClass(QMainWindow, form_class) :
     
