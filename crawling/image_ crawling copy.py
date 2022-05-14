@@ -1,3 +1,4 @@
+from pyparsing import Word
 from selenium import webdriver
 import time
 import urllib.request
@@ -6,14 +7,31 @@ from selenium.webdriver.common.keys import Keys
 import time
 from selenium.webdriver.common.by import By
 import pyautogui
+import sys
+from PyQt5.QtWidgets import *
+from PyQt5 import uic
+
+form_class = uic.loadUiType("./crawling/CrawlingGui.ui")[0]
+class WindowClass(QMainWindow, form_class) :
+    def __init__(self) :
+        super().__init__()
+        self.setupUi(self)
+        self.setEvent()
+
+    def setEvent(self):
+        self.ok_btn.clicked.connect(self.inputfunc)
+        self.cancel_btn.clicked.connect(self.exitfunc)
+
+    def inputfunc(self):
+        word = self.textBox_input.text()
+        count = self.textBox_count.text()
+
+    def exitfunc(self):
 
 
 
 word = input("무엇을 검색할까요? : ")
 count=int(input("몇 개 저장할까요? : "))
-# word = "pokemon"
-# count = int(10)
-
 
 driver = webdriver.Chrome()
 driver.get('http://www.google.co.kr/imghp?hl=ko')

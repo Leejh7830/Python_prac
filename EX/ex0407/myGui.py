@@ -4,7 +4,7 @@ from PyQt5 import uic
 
 from MyExl import MMy
 
-form_class = uic.loadUiType("./ex0407/ex0407.ui")[0]
+form_class = uic.loadUiType("./EX/ex0407/ex0407.ui")[0]
 
 class WindowClass(QMainWindow, form_class) :
     def __init__(self) :
