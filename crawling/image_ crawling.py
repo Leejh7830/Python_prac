@@ -72,5 +72,4 @@ for i, url in enumerate(images_url, 1):
     urllib.request.urlretrieve(url, 'C:\\Users\\Lee\\Desktop\\DEV\\Python\\python_work\\crawling\\img\\'+word+'_'+str(i)+'.jpg')
     if i >= count:
         pyautogui.alert('다운로드 완료!')
-        # print('다운로드 완료!')
         driver.close()

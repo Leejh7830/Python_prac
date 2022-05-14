@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 
-form_class = uic.loadUiType("./ex0408/myGui.ui")[0]
+form_class = uic.loadUiType("./EX/ex0408/myGui.ui")[0]
 
 class WindowClass(QMainWindow, form_class) :
     row = 0
@@ -28,8 +28,8 @@ class WindowClass(QMainWindow, form_class) :
         self.row = self.row + 1
         self.tableWidget.setRowCount(self.row+1)
 
-if __name__ == "__main__" :
+if __name__ == "__main__" : # 인터프리터에서 실행 할 경우
     app = QApplication(sys.argv) 
     myWindow = WindowClass() 
     myWindow.show()
-    app.exec_()
+    app.exec_() # app 닫으면 -> return 0 -> exec_(0) -> app 종료, 닫기전까진 대기상태
