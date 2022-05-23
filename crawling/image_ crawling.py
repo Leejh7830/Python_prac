@@ -26,15 +26,15 @@ class WindowClass(QMainWindow, form_class) :
         exitAction.setStatusTip('프로그램을 종료합니다.') # 마우스 올렸을 때 도움말(화면아래쪽표시)
         exitAction.triggered.connect(qApp.quit)
 
-        insertDog = QAction('개(Dog)',self)
-        insertDog.setStatusTip('검색하고 싶은 단어를 클릭하세요.')
-        insertDog.triggered.connect(qApp.inputDog)
+        # insertDog = QAction('개(Dog)',self)
+        # insertDog.setStatusTip('검색하고 싶은 단어를 클릭하세요.')
+        # insertDog.triggered.connect(qApp.inputDog)
 
         menubar = self.menuBar()
         fileMenu = menubar.addMenu('&File') # & : F에 단축키 설정 (Alt+F)
         fileMenu.addAction(exitAction)
-        insertMenu = menubar.addMenu('&Insert')
-        insertMenu.addAction(insertDog)
+        # insertMenu = menubar.addMenu('&Insert')
+        # insertMenu.addAction(insertDog)
 
     def inputDog(self):
         textBox_word = "Dog"
