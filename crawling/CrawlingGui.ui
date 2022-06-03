@@ -82,7 +82,7 @@
      <string>이미지 개수</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="textBox_word">
+   <widget class="QTextEdit" name="wordBox">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -92,7 +92,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="textBox_count">
+   <widget class="QTextEdit" name="countBox">
     <property name="geometry">
      <rect>
       <x>180</x>
