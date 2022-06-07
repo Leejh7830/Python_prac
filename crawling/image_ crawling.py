@@ -29,7 +29,6 @@ class WindowClass(QMainWindow, form_class) :
         help = QAction('도움말(Help)',self)
         
 
-
         menubar = self.menuBar()
         fileMenu = menubar.addMenu('&File') # & : F에 단축키 설정 (Alt+F)
         fileMenu.addAction(saveAction)
