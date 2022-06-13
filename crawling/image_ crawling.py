@@ -18,7 +18,6 @@ class WindowClass(QMainWindow, form_class) :
         self.setClickEvent()
         self.initUI()
 
-
     def initUI(self):
         saveAction = QAction('저장(Save)', self)
         loadAction = QAction('불러오기(Load)', self)
